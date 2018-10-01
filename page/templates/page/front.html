@@ -1,0 +1,20 @@
+{% extends 'page/base.html' %}
+
+{% block content%}
+    <div class="container">
+        <div class="row">
+            <div class="com-sm-4">
+                <a href="{% url 'page:talk' %}">
+                <button class="btn btn-success">Talk</button>
+                </a>
+            </div>
+            
+            <div class="com-sm-4">
+                <a href="{% url 'page:train' %}">
+                <button class="btn btn-success">Train</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

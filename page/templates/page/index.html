@@ -1,0 +1,21 @@
+{% extends 'page/base.html' %}
+
+{% block content%}
+{% if messgaes %}
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+{% endif %}
+<div class="container">
+<a href="{% url "page:back" %}">
+    <button class="btn btn-info">
+        Back
+    </button>
+</a>
+    <form action="{% url "page:play" %}" method="POST">
+        {% csrf_token %}
+        <input type="text" class="form-control" name="speak"><br/>
+        <input type="submit" name="sp" class="btn btn-success">
+    </form>
+</div>
+{% endblock %}
